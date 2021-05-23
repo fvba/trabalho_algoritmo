@@ -214,47 +214,6 @@ print('-------------------------------------')
 for i in range (0,contador):
   print('{} |   {}   |   {}   ' .format(lista_ordenada[i][0], lista_ordenada[i][1], lista_ordenada[i][2]))
 
-#Eliminando toda a lista de uma única vez
-
-#Cria listas temporárias que serão adicionadas a um dicionário
-nomes_menores = []
-idades_menores = []
-telefones_menores = []
-
-nomes_maiores = []
-idades_maiores = []
-telefones_maiores = []
-
-#Adiciona elemento as listas temporárias conforme a idade 
-for i in range(0,contador):
-  if lista_ordenada[i][1] >= 18:
-    nomes_maiores.append(lista_ordenada[i][0])
-    idades_maiores.append(lista_ordenada[i][1])
-    telefones_maiores.append(lista_ordenada[i][2])
-  else:
-    nomes_menores.append(lista_ordenada[i][0])
-    idades_menores.append(lista_ordenada[i][1])
-    telefones_menores.append(lista_ordenada[i][2])
-
-#Cria os dicionários que receberão as listas de acordo com a idade
-menor_18 = {'nomes': nomes_menores,'idades': idades_menores,'telefones': telefones_menores}
-maior_18 = {'nomes': nomes_maiores,'idades': idades_maiores,'telefones': telefones_maiores}
-
-#Deleta as listas e os dados criados anteriormente, conforme pede o exercício
-del(lista_ordenada)
-del(nomes,idades,telefones)
-del(nomes_menores,idades_menores,telefones_menores)
-del(nomes_maiores,idades_maiores,telefones_maiores)
-
-#Exibe os dicioários conforme o critério de idade
-print('\nDicionário com os contatos de acordo com a idade:')
-print('-----------------------------------------------------')
-print('Dicionário com os contatos menores de 18 anos:')
-print(menor_18)
-print('-----------------------------------------------------')
-print('Dicionário com os contatos maiores ou igual a 18 anos')
-print(maior_18)
-
 #Eliminando a lista conforme os dados vão sendo adicionados ao dicionário
 
 #Cria listas temporárias que serão adicionadas a um dicionário
